@@ -1,0 +1,1056 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>不良研究社网站-民间次文化观察档案</title>
+<meta name="description" content="不良研究社网站是一个聚焦街头次文化、独立出版与地下音乐档案的民间观察站，收录2026年11月的田野记录、访谈时间线与争议条目，按类型、年代、地域分层整理，并公开每条资料的来源与核对方法。">
+<meta name="keywords" content="不良研究社网站">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231c1a17'/%3E%3Cpath d='M14 44 L26 18 L34 34 L40 24 L52 44' stroke='%23e2b04a' stroke-width='5' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1c1a17;
+  --ink-2:#3b3730;
+  --paper:#f6f1e7;
+  --paper-2:#efe7d8;
+  --line:#d6c9b2;
+  --accent:#b4531f;
+  --accent-2:#e2b04a;
+  --muted:#6d6459;
+  --ok:#3f6b4f;
+  --radius:10px;
+  --shadow:0 2px 10px rgba(28,26,23,.08);
+  --gap:18px;
+  --fs-h1:clamp(28px,4.4vw,46px);
+  --fs-h2:clamp(21px,2.6vw,27px);
+  --fs-h3:clamp(17px,1.8vw,19px);
+  --fs-body:16px;
+  --fs-sm:14px;
+  --sticky:88px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--sticky) + 12px)}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Songti SC","Noto Serif SC","Source Han Serif SC",Georgia,"Microsoft YaHei",serif;
+  font-size:var(--fs-body);line-height:1.78;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:"Heiti SC","Noto Sans SC","PingFang SC",system-ui,sans-serif;line-height:1.32;margin:0}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:1.25em}
+li{margin-bottom:6px}
+img{max-width:100%;height:auto;display:block}
+.wrap{width:min(1180px,100%);margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:10px 16px;z-index:99}
+.skip:focus{left:8px;top:8px}
+
+/* ---------- 吸顶区 ---------- */
+.sticky-top{position:sticky;top:0;z-index:50}
+.announce{
+  background:var(--ink);color:#f2ead9;font-size:13px;
+  display:flex;gap:14px;align-items:center;justify-content:center;
+  padding:7px 20px;letter-spacing:.02em;
+}
+.announce b{color:var(--accent-2);font-weight:600}
+.announce a{color:#f2ead9;text-decoration:underline;text-underline-offset:3px}
+.announce .dot{width:5px;height:5px;border-radius:50%;background:var(--accent-2);flex:none}
+.site-head{
+  background:rgba(246,241,231,.96);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{display:flex;align-items:center;gap:18px;min-height:58px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-family:"Heiti SC","Noto Sans SC",sans-serif;font-weight:700;font-size:18px;white-space:nowrap}
+.brand:hover{text-decoration:none}
+.brand svg{width:32px;height:32px;flex:none}
+.main-nav{margin-left:auto}
+.nav-toggle{
+  display:none;background:none;border:1.5px solid var(--ink);border-radius:8px;
+  padding:6px 12px;font-size:14px;cursor:pointer;color:var(--ink);
+  font-family:inherit;
+}
+.nav-toggle:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.main-nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.main-nav a{
+  display:inline-block;padding:7px 11px;border-radius:7px;color:var(--ink-2);
+  font-size:14.5px;font-family:"Heiti SC","Noto Sans SC",sans-serif;
+}
+.main-nav a:hover,.main-nav a:focus-visible{background:var(--paper-2);text-decoration:none;color:var(--accent)}
+.main-nav a:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.head-entry{display:flex;gap:8px;align-items:center}
+.head-entry .btn-sm{font-size:13.5px;padding:6px 13px}
+
+/* ---------- 通用组件 ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--accent);color:#fff;border:1.5px solid var(--accent);
+  padding:10px 20px;border-radius:var(--radius);font-size:15px;
+  font-family:"Heiti SC","Noto Sans SC",sans-serif;cursor:pointer;
+  transition:transform .15s ease,background .15s ease;
+}
+.btn:hover{text-decoration:none;background:#98451a;transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--accent-2);outline-offset:2px}
+.btn-sm{padding:7px 14px;font-size:14px}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.eyebrow{
+  font-family:"Heiti SC","Noto Sans SC",sans-serif;font-size:12.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:8px;font-weight:600;
+}
+.sec{padding:46px 0;border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:none}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.sec-head h2{font-size:var(--fs-h2)}
+.sec-head .sec-note{font-size:var(--fs-sm);color:var(--muted);max-width:420px}
+.card{
+  background:#fffdf8;border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 20px;box-shadow:var(--shadow);
+}
+.tag{
+  display:inline-block;font-size:12.5px;padding:3px 9px;border-radius:20px;
+  border:1px solid var(--line);background:var(--paper-2);color:var(--ink-2);
+  margin:0 6px 6px 0;font-family:"Heiti SC","Noto Sans SC",sans-serif;
+}
+a.tag:hover{background:var(--accent);color:#fff;border-color:var(--accent);text-decoration:none}
+.meta{font-size:13px;color:var(--muted);font-family:"Heiti SC","Noto Sans SC",sans-serif}
+.hr-soft{border:none;border-top:1px dashed var(--line);margin:14px 0}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 320px at 88% -10%,rgba(226,176,74,.30),transparent 62%),
+    linear-gradient(180deg,#fbf6ec 0%,var(--paper) 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;
+  padding:56px 0 52px;
+}
+.hero h1{font-size:var(--fs-h1);letter-spacing:.01em;margin-bottom:16px}
+.hero h1 .hl{color:var(--accent)}
+.hero-lead{font-size:17px;color:var(--ink-2);max-width:620px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 24px}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:16px;max-width:560px}
+.hero-stats div{font-family:"Heiti SC","Noto Sans SC",sans-serif}
+.hero-stats b{display:block;font-size:22px;color:var(--accent);line-height:1.2}
+.hero-stats span{font-size:12.5px;color:var(--muted)}
+.hero-art{position:relative}
+.hero-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 8px 18px rgba(28,26,23,.12))}
+.art-cap{font-size:12px;color:var(--muted);margin-top:8px;text-align:right;font-family:"Heiti SC",sans-serif}
+
+/* ---------- 主区布局 ---------- */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 306px;gap:36px;padding:0 0 20px;align-items:start}
+.side{
+  position:sticky;top:calc(var(--sticky) + 10px);
+  border:1px solid var(--line);border-radius:var(--radius);background:#fffdf8;
+  padding:16px 14px;box-shadow:var(--shadow);font-size:14px;
+}
+.side h2{font-size:15px;margin-bottom:10px;font-family:"Heiti SC",sans-serif}
+.side ol{list-style:none;margin:0;padding:0;counter-reset:s}
+.side li{counter-increment:s;margin-bottom:2px}
+.side li a{
+  display:flex;gap:8px;padding:6px 8px;border-radius:6px;color:var(--ink-2);font-size:13.5px;
+  border-left:3px solid transparent;
+}
+.side li a::before{content:counter(s);color:var(--muted);font-size:12px;min-width:14px}
+.side li a:hover{background:var(--paper-2);text-decoration:none}
+.side li a.active{border-left-color:var(--accent);background:var(--paper-2);color:var(--accent);font-weight:600}
+.side .side-foot{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:12px;color:var(--muted)}
+
+/* ---------- 概览 ---------- */
+.overview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.ov-card{background:#fffdf8;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.ov-card h3{font-size:var(--fs-h3);margin-bottom:8px}
+.ov-card p{font-size:14.5px;margin-bottom:8px}
+.ov-card .meta{display:block}
+
+/* ---------- 精选 ---------- */
+.feat-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:var(--gap)}
+.feat{display:flex;flex-direction:column;overflow:hidden;padding:0}
+.feat img{width:100%;height:150px;object-fit:cover}
+.feat .feat-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.feat:first-child img{height:214px}
+.feat h3{font-size:var(--fs-h3)}
+.feat p{font-size:14px;color:var(--ink-2);margin:0}
+.feat .meta{margin-top:auto}
+
+/* ---------- 最新更新(紧凑列表) ---------- */
+.updates{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.updates li{
+  display:grid;grid-template-columns:92px minmax(0,1fr) auto;gap:14px;
+  padding:13px 4px;border-bottom:1px solid var(--line);align-items:baseline;
+}
+.updates .date{font-size:13px;color:var(--accent);font-family:"Heiti SC",sans-serif;white-space:nowrap}
+.updates .t{font-size:15px}
+.updates .t a{color:var(--ink)}
+.updates .t a:hover{color:var(--accent)}
+.updates .t small{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+.updates .ch{font-size:12.5px;color:var(--muted);white-space:nowrap;font-family:"Heiti SC",sans-serif}
+
+/* ---------- 分类索引 ---------- */
+.cat-index{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat-item{
+  display:block;border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 15px;background:#fffdf8;color:var(--ink);transition:transform .15s ease,border-color .15s ease;
+}
+.cat-item:hover{text-decoration:none;transform:translateY(-3px);border-color:var(--accent)}
+.cat-item b{display:block;font-family:"Heiti SC",sans-serif;font-size:15px;margin-bottom:2px}
+.cat-item span{font-size:12.5px;color:var(--muted)}
+
+/* ---------- 深度解析 ---------- */
+.deep{background:#fffdf8;border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;box-shadow:var(--shadow)}
+.deep .deep-body{columns:2;column-gap:34px;font-size:15.5px}
+.deep h3{font-size:var(--fs-h3);margin:18px 0 8px;break-after:avoid;padding-top:2px}
+.deep h3:first-child{margin-top:0}
+.deep p{break-inside:avoid-column}
+.deep .divider{column-span:all;border-top:1px dashed var(--line);margin:8px 0 0}
+.pull{
+  border-left:4px solid var(--accent);background:var(--paper-2);
+  padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0;
+  font-family:"Heiti SC",sans-serif;font-size:15px;break-inside:avoid-column;
+}
+.checklist{background:var(--paper-2);border:1px dashed var(--accent);border-radius:8px;padding:14px 16px;break-inside:avoid-column}
+.checklist h4{font-size:14.5px;margin-bottom:6px;font-family:"Heiti SC",sans-serif}
+.checklist ol{padding-left:1.15em;font-size:14px;margin:0}
+.checklist li{margin-bottom:4px}
+.factline{font-size:13.5px;color:var(--ink-2);background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 12px;break-inside:avoid-column}
+
+/* ---------- 体验指南(编号步骤) ---------- */
+.steps{counter-reset:st;list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.steps li{
+  counter-increment:st;display:grid;grid-template-columns:42px minmax(0,1fr);gap:14px;
+  background:#fffdf8;border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;
+}
+.steps li::before{
+  content:counter(st);display:flex;align-items:center;justify-content:center;
+  width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--accent-2);
+  font-family:"Heiti SC",sans-serif;font-size:17px;font-weight:700;
+}
+.steps h3{font-size:16px;margin-bottom:4px}
+.steps p{font-size:14.5px;margin:0}
+
+/* ---------- 对照面板 ---------- */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fffdf8}
+.compare > div{padding:18px 20px}
+.compare > div:first-child{border-right:1px solid var(--line);background:var(--paper-2)}
+.compare h3{font-size:16.5px;margin-bottom:8px}
+.compare dl{margin:0;font-size:14.5px}
+.compare dt{font-family:"Heiti SC",sans-serif;font-size:13px;color:var(--accent);margin-top:10px}
+.compare dd{margin:2px 0 0}
+
+/* ---------- 时间线 ---------- */
+.timeline{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 20px 18px}
+.timeline li::before{content:"";position:absolute;left:-27px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--paper)}
+.timeline time{font-size:13px;color:var(--accent);font-family:"Heiti SC",sans-serif;display:block}
+.timeline b{font-family:"Heiti SC",sans-serif;font-size:15.5px}
+.timeline p{font-size:14.5px;margin:4px 0 0;color:var(--ink-2)}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;gap:10px}
+.faq details{background:#fffdf8;border:1px solid var(--line);border-radius:var(--radius);padding:0 16px}
+.faq summary{
+  cursor:pointer;padding:13px 26px 13px 0;font-family:"Heiti SC",sans-serif;font-size:15.5px;position:relative;list-style:none;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:2px;top:11px;font-size:19px;color:var(--accent)}
+.faq details[open] summary::after{content:"−"}
+.faq summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.faq .ans{padding:0 0 14px;font-size:14.5px;border-top:1px dashed var(--line);padding-top:12px}
+
+/* ---------- 评论 ---------- */
+.cmts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--gap)}
+.cmt{background:#fffdf8;border:1px solid var(--line);border-radius:var(--radius);padding:15px 17px;font-size:14.5px}
+.cmt:nth-child(3n+1){grid-column:span 1}
+.cmt-top{display:flex;align-items:center;gap:10px;margin-bottom:7px}
+.avatar{width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--accent-2);display:flex;align-items:center;justify-content:center;font-family:"Heiti SC",sans-serif;font-size:13px;flex:none}
+.cmt-top b{font-size:14px;font-family:"Heiti SC",sans-serif}
+.cmt-top .meta{margin-left:auto;font-size:12px}
+.cmt .quote{font-size:13.5px;color:var(--muted);border-left:3px solid var(--line);padding-left:9px;margin:8px 0 0}
+
+/* ---------- 资讯 ---------- */
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.news article{border-top:3px solid var(--ink);padding-top:11px}
+.news h3{font-size:16px;margin-bottom:5px}
+.news p{font-size:14px;margin-bottom:6px;color:var(--ink-2)}
+.news .meta{font-size:12.5px}
+
+/* ---------- 榜单/可信度分层 ---------- */
+.rank{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap)}
+.rank-row{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed var(--line)}
+.rank-row:last-child{border-bottom:none}
+.rank-num{font-family:"Heiti SC",sans-serif;font-size:22px;color:var(--accent);min-width:34px;line-height:1.1;font-weight:700}
+.rank-row b{font-family:"Heiti SC",sans-serif;font-size:15px;display:block}
+.rank-row p{font-size:13.5px;margin:2px 0 0;color:var(--ink-2)}
+.tier{font-size:12px;padding:2px 8px;border-radius:12px;font-family:"Heiti SC",sans-serif}
+.tier-a{background:#dfeae0;color:var(--ok)}
+.tier-b{background:#f4e6c4;color:#8a6410}
+.tier-c{background:#eddedb;color:#8c3a26}
+
+/* ---------- 推荐标签 ---------- */
+.reco{display:flex;flex-wrap:wrap;gap:8px}
+
+/* ---------- 页尾 ---------- */
+.site-foot{background:var(--ink);color:#d9cfbc;margin-top:40px;padding:40px 0 22px;font-size:14px}
+.site-foot a{color:#e8dcc4;text-decoration:none}
+.site-foot a:hover{color:#fff;text-decoration:underline}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;margin-bottom:26px}
+.foot-brand{display:flex;align-items:center;gap:10px;font-family:"Heiti SC",sans-serif;font-size:18px;color:#fff;margin-bottom:10px}
+.foot-brand svg{width:30px;height:30px}
+.site-foot h3{font-size:14px;color:#fff;margin-bottom:10px;font-family:"Heiti SC",sans-serif}
+.site-foot ul{list-style:none;margin:0;padding:0}
+.site-foot li{margin-bottom:7px;font-size:13.5px}
+.foot-note{border-top:1px solid #3b3730;padding-top:16px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#a2977f}
+.foot-note p{margin:0}
+.sample-note{font-size:12.5px;color:#a2977f;background:#26231f;border:1px dashed #4a453c;border-radius:8px;padding:10px 14px;margin-bottom:20px}
+
+/* ---------- 搜索 ---------- */
+.search-box{display:flex;gap:8px;margin-bottom:12px}
+.search-box input{
+  flex:1;min-width:0;padding:8px 11px;border:1.5px solid var(--line);border-radius:8px;
+  background:#fff;font-family:inherit;font-size:14px;color:var(--ink);
+}
+.search-box input:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.search-result{font-size:12.5px;color:var(--muted);min-height:18px;margin-bottom:4px}
+.search-hit{list-style:none;margin:0;padding:0;font-size:13px}
+.search-hit li{margin-bottom:4px}
+.search-hit a{color:var(--ink-2)}
+
+/* ---------- 回到顶部 ---------- */
+#toTop{
+  position:fixed;right:18px;bottom:22px;z-index:60;
+  width:44px;height:44px;border-radius:50%;border:none;cursor:pointer;
+  background:var(--ink);color:var(--accent-2);font-size:19px;line-height:1;
+  box-shadow:0 4px 14px rgba(0,0,0,.2);
+  opacity:0;pointer-events:none;transform:translateY(8px);
+  transition:opacity .2s ease,transform .2s ease;
+}
+#toTop.show{opacity:1;pointer-events:auto;transform:none}
+#toTop:focus-visible{outline:3px solid var(--accent-2);outline-offset:2px}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1000px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .side{position:static;order:2;margin-top:26px}
+  .hero-grid{grid-template-columns:1fr;gap:26px;padding:40px 0 38px}
+  .hero-art{max-width:520px}
+  .cat-index{grid-template-columns:repeat(3,1fr)}
+  .deep .deep-body{columns:1}
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .feat:first-child{grid-column:span 2}
+  .overview-grid{grid-template-columns:1fr 1fr}
+  .news{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1.4fr 1fr 1fr}
+}
+@media (max-width:760px){
+  :root{--sticky:84px}
+  .announce{font-size:12px;justify-content:flex-start;overflow:hidden;white-space:nowrap}
+  .announce a{display:none}
+  .head-inner{min-height:52px;gap:10px}
+  .nav-toggle{display:inline-block;margin-left:auto}
+  .main-nav{
+    display:none;flex-basis:100%;margin-left:0;
+  }
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column;gap:2px;padding-bottom:8px}
+  .main-nav a{display:block;padding:9px 10px}
+  .head-entry{flex-basis:100%;padding-bottom:8px}
+  .head-entry .btn-sm{width:100%;justify-content:center}
+  .hero h1{font-size:clamp(26px,7.4vw,34px)}
+  .overview-grid,.cat-index,.feat-grid,.news,.cmts,.rank,.compare{grid-template-columns:1fr}
+  .feat:first-child{grid-column:auto}
+  .feat:first-child img{height:170px}
+  .compare > div:first-child{border-right:none;border-bottom:1px solid var(--line)}
+  .updates li{grid-template-columns:70px minmax(0,1fr);gap:10px}
+  .updates .ch{display:none}
+  .deep{padding:20px 18px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:22px}
+  .sec{padding:34px 0}
+  #toTop{right:12px;bottom:14px;width:42px;height:42px}
+}
+@media (max-width:380px){
+  .foot-grid{grid-template-columns:1fr}
+  .hero-stats{gap:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+  .btn:hover,.cat-item:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="sticky-top">
+  <div class="announce">
+    <span class="dot" aria-hidden="true"></span>
+    <b>不良研究社网站</b>
+    <span>11月6日更新：第14期「打口带流通地图」补入广州、西安两站口述，共7条音频摘要</span>
+    <a href="/#updates">查看更新</a>
+  </div>
+  <header class="site-head">
+    <div class="wrap head-inner">
+      <a class="brand" href="/#top">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="12" fill="#1c1a17"/>
+          <path d="M14 44 L26 18 L34 34 L40 24 L52 44" stroke="#e2b04a" stroke-width="5" fill="none" stroke-linejoin="round"/>
+        </svg>
+        <span>不良研究社网站</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">菜单</button>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#featured">精选推荐</a></li>
+          <li><a href="/#cats">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+        </ul>
+      </nav>
+      <div class="head-entry">
+        <a class="btn btn-sm" href="/#updates">本周更新</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div id="top"></div>
+
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">田野记录 · 独立出版 · 地下声音</p>
+      <h1 id="heroTitle">不良研究社<span class="hl">网站</span></h1>
+      <p class="hero-lead">把打口带、复印小志、地下室演出海报和二手录音这些容易被忽略的实物放在一起整理。每条记录标注采集时间、持有人、城市站点和核对方式，能追溯的直接给出来源，不能追溯的写清楚缺口。</p>
+      <div class="hero-actions">
+        <a class="btn" href="/#deep">读本期深度解析</a>
+        <a class="btn btn-ghost" href="/#guide">按流程查一条资料</a>
+      </div>
+      <div class="hero-stats" aria-label="档案规模">
+        <div><b>1 286</b><span>已编目条目</span></div>
+        <div><b>37</b><span>覆盖城市站点</span></div>
+        <div><b>214</b><span>口述音频摘要</span></div>
+        <div><b>2026-11-06</b><span>最近一次编目</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 420 340" role="img" aria-label="线描构图：磁带、复印小志、折叠海报与地图钉">
+        <defs>
+          <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
+            <path d="M22 0 H0 V22" fill="none" stroke="#d6c9b2" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect x="0" y="0" width="420" height="340" fill="#fffdf8"/>
+        <rect x="0" y="0" width="420" height="340" fill="url(#grid)"/>
+        <g transform="translate(38 46) rotate(-6)">
+          <rect x="0" y="0" width="196" height="120" rx="8" fill="#1c1a17"/>
+          <rect x="14" y="14" width="76" height="40" rx="4" fill="#f6f1e7"/>
+          <circle cx="46" cy="34" r="9" fill="none" stroke="#b4531f" stroke-width="3"/>
+          <circle cx="138" cy="34" r="9" fill="none" stroke="#b4531f" stroke-width="3"/>
+          <rect x="14" y="72" width="168" height="6" rx="3" fill="#4a453c"/>
+          <rect x="14" y="86" width="120" height="6" rx="3" fill="#4a453c"/>
+          <rect x="14" y="100" width="146" height="6" rx="3" fill="#4a453c"/>
+        </g>
+        <g transform="translate(228 38) rotate(4)">
+          <rect x="0" y="0" width="148" height="188" rx="6" fill="#f2ead9" stroke="#1c1a17" stroke-width="2"/>
+          <rect x="14" y="16" width="120" height="30" fill="#b4531f"/>
+          <text x="20" y="37" font-family="sans-serif" font-size="15" fill="#f6f1e7">小志 No.7</text>
+          <rect x="14" y="60" width="120" height="5" fill="#1c1a17"/>
+          <rect x="14" y="74" width="96" height="5" fill="#6d6459"/>
+          <rect x="14" y="88" width="120" height="5" fill="#6d6459"/>
+          <rect x="14" y="102" width="78" height="5" fill="#6d6459"/>
+          <rect x="14" y="124" width="120" height="46" fill="#e2b04a" opacity=".55"/>
+        </g>
+        <g transform="translate(52 206) rotate(3)">
+          <rect x="0" y="0" width="318" height="96" rx="6" fill="#efe7d8" stroke="#d6c9b2"/>
+          <path d="M24 62 L74 30 L112 54 L160 20 L206 48 L258 26 L296 56" fill="none" stroke="#b4531f" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="74" cy="30" r="5" fill="#1c1a17"/>
+          <circle cx="160" cy="20" r="5" fill="#1c1a17"/>
+          <circle cx="258" cy="26" r="5" fill="#1c1a17"/>
+          <text x="18" y="84" font-family="sans-serif" font-size="11" fill="#6d6459">城市站点 · 磁带流通线</text>
+        </g>
+        <circle cx="372" cy="252" r="20" fill="#1c1a17"/>
+        <path d="M372 240 v18 M364 250 l8 -8 8 8" stroke="#e2b04a" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+      <p class="art-cap">图：编目工作台的常见实物组合</p>
+    </div>
+  </div>
+</section>
+
+<main id="main" class="wrap">
+  <div class="layout">
+    <div>
+      <section class="sec" id="overview" aria-labelledby="ovTitle">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">领域概览</p>
+            <h2 id="ovTitle">这个档案在收什么，边界在哪</h2>
+          </div>
+          <p class="sec-note">三类核心实物：磁带与唱片、油印与复印小志、演出与流通凭证。收的是物件本身与流转路径，不评艺术成就。</p>
+        </div>
+        <div class="overview-grid">
+          <article class="ov-card">
+            <h3>打口带与转录副本</h3>
+            <p>1998 年至 2009 年间沿海口岸流入的切割唱片、二次转录磁带。记录重点是切口位置、转录代次和标签手写内容。广州站现存 214 份带体，其中 61 份为三手以上转录。</p>
+            <span class="meta">入编标准：带体可辨认 + 至少一位流转人</span>
+          </article>
+          <article class="ov-card">
+            <h3>油印小志与复印件</h3>
+            <p>纸张克重、油印色层、装订方式比内容更能定年代。西安站 2003 年《夹层》第 4 期用 70 克纸、双色油印，与同期北京三元桥一带的复印本形成明显区分。</p>
+            <span class="meta">入编标准：期号可查或持有人口述一致</span>
+          </article>
+          <article class="ov-card">
+            <h3>地下室演出凭证</h3>
+            <p>门票、手环、场地告示、海报残片。沈阳 2006 年 11 月的三场演出只剩下两张手写票根与一张 A2 海报，靠不同持有人交叉描述补出时间顺序。</p>
+            <span class="meta">入编标准：两件以上互证材料</span>
+          </article>
+        </div>
+        <div class="hr-soft"></div>
+        <p style="font-size:14.5px;color:var(--ink-2)">不收未经授权的完整音源文件，也不做资源分发。条目以物件描述、流转口述和公开演出信息为主，涉及版权的内容只保留曲目名与时长。</p>
+      </section>
+
+      <section class="sec" id="featured" aria-labelledby="feTitle">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">精选内容</p>
+            <h2 id="feTitle">本周重点编目</h2>
+          </div>
+          <p class="sec-note">三条记录来源不同：一件实物、一段口述、一组对照。</p>
+        </div>
+        <div class="feat-grid">
+          <article class="card feat">
+            <img src="https://picsum.photos/seed/buliang-tape01/640/420" width="640" height="420" loading="lazy" alt="摊开的磁带与手写标签并排放置在木桌上" style="object-fit:cover">
+            <div class="feat-body">
+              <span class="meta">实物 · 广州站 · 11月5日</span>
+              <h3>一张 1999 年切割唱片的二次转录带</h3>
+              <p>带体标签写着两行字，一行英文乐队名，一行中文译名，笔迹判为同一人。持有人称转录自中山大学附近摊位，切口在 3 点钟方向，切口深度约 4 毫米。</p>
+              <span class="meta">编号 GZ-1999-0412</span>
+            </div>
+          </article>
+          <article class="card feat">
+            <img src="https://picsum.photos/seed/buliang-zine02/480/320" width="480" height="320" loading="lazy" alt="油印小志内页特写，纸张边缘有装订孔" style="object-fit:cover">
+            <div class="feat-body">
+              <span class="meta">口述 · 西安站 · 11月4日</span>
+              <h3>《夹层》第 4 期的双色油印与纸张克重</h3>
+              <p>口述人回忆 2003 年印数约 120 份，纸张是托人从印刷厂边角料里拿的。双色套印错位约 2 毫米，成为后期辨伪的重要特征。</p>
+              <span class="meta">编号 XA-2003-Z007</span>
+            </div>
+          </article>
+          <article class="card feat">
+            <img src="https://picsum.photos/seed/buliang-poster03/480/320" width="480" height="320" loading="lazy" alt="墙面上残留的半张演出海报，边角卷曲" style="object-fit:cover">
+            <div class="feat-body">
+              <span class="meta">对照 · 沈阳站 · 11月3日</span>
+              <h3>三场地下室演出的时间线复原</h3>
+              <p>票根手写日期与海报印刷日期相差一天，两方证词对开场时间说法不同。整理者按场地方作息与公交末班时间反推，给出两个候选版本。</p>
+              <span class="meta">编号 SY-2006-P019</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="updates" aria-labelledby="upTitle">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">最新更新</p>
+            <h2 id="upTitle">近十日编目与修订</h2>
+          </div>
+          <p class="sec-note">修订条目会保留旧说法并注明改动日期。</p>
+        </div>
+        <ul class="updates">
+          <li><span class="date">11月6日</span><span class="t"><a href="/#deep">打口带流通地图补入广州、西安两站口述</a><small>新增 7 条音频摘要，其中 2 条对 2001 年进货路径说法冲突，已并列保留。</small></span><span class="ch">深度解析</span></li>
+          <li><span class="date">11月5日</span><span class="t"><a href="/#featured">GZ-1999-0412 标签笔迹比对完成</a><small>两行字判为同一人书写，此前一度认为出自两人之手。</small></span><span class="ch">实物编目</span></li>
+          <li><span class="date">11月4日</span><span class="t"><a href="/#cats">新增「演出票根与手环」子类</a><small>从「海报与告示」拆出，现有 96 条，按城市分组。</small></span><span class="ch">分类调整</span></li>
+          <li><span class="date">11月2日</span><span class="t"><a href="/#guide">核对流程第 3 步改写</a><small>原来只要求两位证人，现在增加纸张或带体实物比对。</small></span><span class="ch">方法修订</span></li>
+          <li><span class="date">10月30日</span><span class="t"><a href="/#faq">FAQ 补入「同一物件多个版本怎么办」</a><small>针对转录带多代副本的编号规则说明。</small></span><span class="ch">常见问题</span></li>
+          <li><span class="date">10月28日</span><span class="t"><a href="/#rank">可信度分层表首次公开</a><small>分三级，附 18 个条目的具体定级理由。</small></span><span class="ch">方法公开</span></li>
+        </ul>
+      </section>
+
+      <section class="sec" id="cats" aria-labelledby="caTitle">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">分类入口</p>
+            <h2 id="caTitle">按类型、年代与城市查找</h2>
+          </div>
+          <p class="sec-note">点击进入对应索引，条目按入编日期倒序。</p>
+        </div>
+        <div class="cat-index">
+          <a class="cat-item" href="/#overview"><b>打口唱片切口图谱</b><span>214 件 · 按切口方位分组</span></a>
+          <a class="cat-item" href="/#featured"><b>转录磁带代次判定</b><span>168 件 · 含三手以上副本</span></a>
+          <a class="cat-item" href="/#featured"><b>油印小志纸张与色层</b><span>143 件 · 70 克与 80 克两类</span></a>
+          <a class="cat-item" href="/#updates"><b>地下室演出票根与手环</b><span>96 件 · 覆盖 11 座城市</span></a>
+          <a class="cat-item" href="/#deep"><b>城市流通站点地图</b><span>37 站 · 含摊位停留时间</span></a>
+          <a class="cat-item" href="/#guide"><b>口述音频摘要索引</b><span>214 条 · 均注明录音日期</span></a>
+          <a class="cat-item" href="/#news"><b>独立出版流通事件</b><span>52 条 · 2001 年至今</span></a>
+          <a class="cat-item" href="/#rank"><b>条目可信度分层</b><span>三级 · 附定级理由</span></a>
+        </div>
+      </section>
+
+      <section class="sec" id="deep" aria-labelledby="dpTitle">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">深度解析</p>
+            <h2 id="dpTitle">打口带的价值判断，为什么不能只看切口</h2>
+          </div>
+          <p class="sec-note">本条为全页唯一主体阅读区，结论可被核对与反驳。</p>
+        </div>
+        <div class="deep">
+          <div class="deep-body">
+            <h3>切口方位只是流通痕迹的一半证据</h3>
+            <p>2001 年前后，广州、汕头两地的切割唱片切口方位分布差异明显。广州站已编目的 214 件中，3 点钟方向切口占 118 件，约 55%；汕头站 89 件中，同样方位占 31 件，约 35%。差异落在具体数字上，说明切割工序并非同一批人完成，单靠“有切口”不能推出来源城市。</p>
+            <p>反过来，切口深度与唱片转速标记的对应关系更稳定。深度在 3 至 5 毫米之间、且带体仍可正常播放的样本，广州站记录 41 件，其中 37 件的标签为同一批手写格式。这个比例足以支撑一个可反驳的判断：<strong>切口深度比切口方位更能预测带体是否经过二次转录。</strong></p>
+            <div class="pull">把切口方位当作来源证据，目前只有约六成把握；把深度加标签格式一起看，广州站样本的判对率接近九成。</div>
+            <h3>转录代次：一份 2002 年与 2006 年的对照</h3>
+            <p>西安站有两份同一乐队专辑的转录带，编号 XA-2002-118 与 XA-2006-047。前者标签写“自 CD 转”，后者写“自前辈带转”。前者时长 43 分 12 秒，后者 44 分 06 秒，相差 54 秒，来自磁带起止点的取舍差异。</p>
+            <p>2006 年那份的底噪在 2 分 15 秒处开始上扬，与 2002 年那份的同位置平缓形成对比。持有人口述称第二份转录时磁带已用旧。底噪曲线与口述在时间点上吻合，但只有一位证人，所以定级为 B 级而非 A 级。这里把判断拆开：<strong>事实</strong>是两份时长不同、底噪起升位置不同；<strong>推断</strong>是后者转录自旧带；<strong>待补</strong>是中间是否还有一份原始转录。</p>
+            <h3>小志纸张：70 克与 80 克的年代分界</h3>
+            <p>2003 年至 2005 年，西安站 27 份小志中有 19 份使用 70 克纸，购自本地纸张批发市场；2006 年后 22 份中有 15 份改用 80 克复印纸。分界点落在 2006 年 3 月，与当地一家印刷厂更换供货渠道的时间接近，但只有一位口述人提到这件事。</p>
+            <p>这条线索的问题在于因果方向。可能是纸张供应变了导致小志改纸，也可能是印制者自己换了习惯。现有材料无法区分。因此本站把它列为“时间相关”，不写成“因果”。这类区分在编目字段里单独标注，避免后来引用时被当成定论。</p>
+            <div class="factline"><strong>可核对项：</strong>XA-2002-118 与 XA-2006-047 两份带体均可在西安站预约调阅；纸张克重检测记录存于 XA-2003-Z001 至 Z027 条目附注。</div>
+            <h3>流通地图上被高估的三个站点</h3>
+            <p>北京三元桥、上海五角场、武汉街道口三地在早期口述里出现频率极高，但实物留存比例并不高。三元桥一带在 2000 年至 2004 年的 63 条口述中，只有 12 条能对应到实物，约 19%。广州中山大学周边 58 条口述对应 31 件实物，约 53%。</p>
+            <p>出现频率高不等于物流量大，也可能只是因为口述人更愿意谈那几个地方。三元桥的叙述集中在少数几位重复出现的讲述者身上，去重后只剩 9 人。反过来，汕头、株洲两个站点实物不少，专门口述却很少，属于被低估的一类。</p>
+            <div class="checklist">
+              <h4>判断一条打口带记录的四个核对点</h4>
+              <ol>
+                <li>带体标签笔迹是否与已知批次一致</li>
+                <li>切口深度、方位与播放状态是否同时记录</li>
+                <li>时长与已知版本比对，差值是否在合理范围</li>
+                <li>证人是否互相独立，还是转述同一来源</li>
+              </ol>
+            </div>
+            <h3>争议：谁有资格给物件定价</h3>
+            <p>2026 年 10 月中旬，二手平台上出现过一张标价 2 800 元的切割唱片，卖家声称出自 1999 年广州某摊位。广州站核对后认为标签格式与已知批次不符，但卖家坚持有当年购买凭证，凭证照片未公开。</p>
+            <p>目前的处理方式是把两种说法并列：<strong>事实</strong>是标签格式存在差异；<strong>回应</strong>是卖家称凭证存在但未出示；<strong>推测</strong>是标签可能在后期更换。价格高低不在本站判断范围内，只记录证据链的完整度。</p>
+            <div class="divider"></div>
+            <p style="font-size:13.5px;color:var(--muted);margin:10px 0 0">反驳入口：若汕头站切口方位样本扩充后比例接近广州，上文第一条判断需要重写。修订会保留旧版本与日期。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="guide" aria-labelledby="guTitle">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">体验指南</p>
+            <h2 id="guTitle">想查一条资料，按这两条路径走</h2>
+          </div>
+          <p class="sec-note">一条给手里有实物的人，一条给只想查年代的人。</p>
+        </div>
+        <h3 style="font-size:17px;margin-bottom:10px">路径 A：手里有实物</h3>
+        <ol class="steps">
+          <li><div><h3>先拍标签与切口</h3><p>标签正面、带体切口、盒内衬纸各一张，自然光下拍摄，别裁掉边缘。切口方位按钟面记录，比如 3 点钟、9 点钟。</p></div></li>
+          <li><div><h3>记下时长与底噪起升位置</h3><p>用手机录音完整播放一遍，记下起止时间。底噪明显变大处标出分钟数，这个数字比“音质一般”有用得多。</p></div></li>
+          <li><div><h3>找第二位独立证人</h3><p>证人不能是转述同一件事的人。要问具体细节：摊位在第几个路口、当年售价、包装用塑料袋还是纸袋。</p></div></li>
+          <li><div><h3>对照已有条目再编号</h3><p>按城市、年份、类型三段编号，例如 GZ-1999-0412。已有批次优先并入，不另开号。</p></div></li>
+        </ol>
+        <h3 style="font-size:17px;margin:22px 0 10px">路径 B：只想查年代</h3>
+        <ol class="steps">
+          <li><div><h3>从纸张或介质入手</h3><p>纸看克重和油印色层，带有看转速标记和盒体材质。介质特征比内容描述稳定。</p></div></li>
+          <li><div><h3>锁定城市站点再看年代</h3><p>同一城市不同年份的流通习惯差别大。先定城市，能排除掉一半错误候选。</p></div></li>
+          <li><div><h3>用交叉条目验证</h3><p>找同一时期的两三条记录，看它们的纸张、标签、切口是否一致。只对上一个特征不算核实。</p></div></li>
+          <li><div><h3>查可信度分层</h3><p>三级分层里 C 级条目只作参考，不作为年代判断的主要依据。定级理由公开可查。</p></div></li>
+        </ol>
+        <div class="compare" style="margin-top:24px">
+          <div>
+            <h3>可直接采信</h3>
+            <dl>
+              <dt>实物 + 两位独立证人</dt>
+              <dd>带体可播放，标签与已知批次一致，证人说辞互不转述。</dd>
+              <dt>公开演出信息</dt>
+              <dd>有当年告示或印刷海报，且地点、日期与其他条目吻合。</dd>
+              <dt>纸张检测记录</dt>
+              <dd>克重、色层有实测数据，检测人与日期均可查。</dd>
+            </dl>
+          </div>
+          <div>
+            <h3>只能作参考</h3>
+            <dl>
+              <dt>单人回忆</dt>
+              <dd>没有实物或其他证人，时间点可能偏移一到两年。</dd>
+              <dt>转述二手说法</dt>
+              <dd>口述人自己没有经历，讲的是听来的事，需再往上找来源。</dd>
+              <dt>后期更换标签</dt>
+              <dd>标签笔迹与带体年代不符，或标签纸明显新于盒体。</dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="faq" aria-labelledby="fqTitle">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">常见问题</p>
+            <h2 id="fqTitle">查资料时最常卡住的六件事</h2>
+          </div>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>同一盘打口带出现两个版本怎么办？</summary>
+            <div class="ans">先比较时长与底噪起升位置，再看标签笔迹。两份都保留原编号，用后缀区分，例如 GZ-1999-0412 与 GZ-1999-0412-b。不要合并成一条，合并会丢掉转录代次的信息。</div>
+          </details>
+          <details>
+            <summary>油印小志没有期号，还能入编吗？</summary>
+            <div class="ans">可以，归入“未编号小志”子类，标注纸张克重、装订孔数、油印颜色数量三项。三项中至少两项能与已知批次对上，才进入正式索引，否则只留在待定区。</div>
+          </details>
+          <details>
+            <summary>口述人记不清年份，只记得是“非典那年”之类怎么办？</summary>
+            <div class="ans">把口述原话完整记下来，旁边标注推算年份与推算依据，比如“非典那年”记为 2003 年，依据是公共卫生事件时间。原话与推算分开存，别改写成确定年份。</div>
+          </details>
+          <details>
+            <summary>切割唱片的切口方位真的能判断来源城市吗？</summary>
+            <div class="ans">单独看方位只能到六成左右把握。广州站 3 点钟方向占 55%，汕头站占 35%，两个分布有重叠。加上切口深度和标签格式一起看，判对率才明显提高。</div>
+          </details>
+          <details>
+            <summary>演出票根只剩一张，还能复原时间线吗？</summary>
+            <div class="ans">单张票根只能定一场。要复原三场顺序，得配上海报印刷日期、场地方作息和至少一位当时在场者的描述。沈阳 2006 年那组材料就属于这种情况，最后给出两个候选版本。</div>
+          </details>
+          <details>
+            <summary>纸质小志怎么保存，复印纸会不会自己发黄？</summary>
+            <div class="ans">70 克油印纸在南方潮湿环境里约五到八年出现明显黄斑，80 克复印纸慢一些。建议干燥避光、单页之间夹无酸纸。已经发黄的不要日晒，晒会加速脆化。</div>
+          </details>
+        </div>
+      </section>
+
+      <section class="sec" id="comments" aria-labelledby="cmTitle">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">用户评论</p>
+            <h2 id="cmTitle">读者与持有人怎么说</h2>
+          </div>
+          <p class="sec-note">评论保留原语气，包含质疑与不满。</p>
+        </div>
+        <div class="cmts">
+          <article class="cmt">
+            <div class="cmt-top"><span class="avatar" aria-hidden="true">陈</span><b>陈默在汕头</b><span class="meta">11月6日</span></div>
+            <p>汕头站 89 件里 31 件是 3 点钟方向，这个数我信，因为我自己那批有七成在 9 点钟方向，跟广州正好反着。建议把这个反向分布也画进图谱里。</p>
+            <p class="quote">引用：城市流通站点地图</p>
+          </article>
+          <article class="cmt">
+            <div class="cmt-top"><span class="avatar" aria-hidden="true">林</span><b>林间复印店</b><span class="meta">11月5日</span></div>
+            <p>XA-2006-047 底噪那段说得准，我那盘放出来 2 分 15 秒开始确实沙沙响。但 54 秒的时长差，我觉得不全是起止点取舍，中间可能少了一小段间奏。</p>
+            <p class="quote">引用：转录代次对照</p>
+          </article>
+          <article class="cmt">
+            <div class="cmt-top"><span class="avatar" aria-hidden="true">周</span><b>周末去看演出</b><span class="meta">11月4日</span></div>
+            <p>沈阳那三场的时间线，两个候选版本其实都说得通。不过按当年末班公交 21 点 40 分算，我倾向开场更早的那个版本，晚了根本回不去。</p>
+            <p class="quote">引用：SY-2006-P019</p>
+          </article>
+          <article class="cmt">
+            <div class="cmt-top"><span class="avatar" aria-hidden="true">赵</span><b>赵氏旧书</b><span class="meta">11月3日</span></div>
+            <p>可信度分层挺好，但 B 级条目也太多了，翻十条约有六条是 B，看的时候没有区分度。能不能把 B 再拆一层？</p>
+            <p class="quote">引用：条目可信度分层</p>
+          </article>
+          <article class="cmt">
+            <div class="cmt-top"><span class="avatar" aria-hidden="true">吴</span><b>吴工不修带</b><span class="meta">11月2日</span></div>
+            <p>一般般。深度解析里说切口深度比方位准，可你给的广州站样本只有 41 件，样本量有点小，结论下得太早了吧。</p>
+            <p class="quote">引用：切口方位只是流通痕迹的一半证据</p>
+          </article>
+          <article class="cmt">
+            <div class="cmt-top"><span class="avatar" aria-hidden="true">许</span><b>许记纸张行</b><span class="meta">10月31日</span></div>
+            <p>70 克换 80 克那段写得克制，确实分不清是供应变了还是印制者自己换的。我们行里 2006 年春天进货渠道也动过一次，时间凑得上，但不能反过来证明什么。</p>
+            <p class="quote">引用：小志纸张：70 克与 80 克的年代分界</p>
+          </article>
+          <article class="cmt">
+            <div class="cmt-top"><span class="avatar" aria-hidden="true">黄</span><b>黄浦江边</b><span class="meta">10月30日</span></div>
+            <p>五角场被高估这点我认。问过几个当年摆摊的，去重后其实就四五个人在讲，讲的内容还差不多。</p>
+            <p class="quote">引用：流通地图上被高估的三个站点</p>
+          </article>
+          <article class="cmt">
+            <div class="cmt-top"><span class="avatar" aria-hidden="true">郑</span><b>郑老磁带</b><span class="meta">10月29日</span></div>
+            <p>提个错：11月4日那条分类调整，票根子类写的是 96 条，但按我数城市分组只有 94 条，差的 2 条可能是重复入编。麻烦核一下。</p>
+            <p class="quote">引用：最新更新</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="news" aria-labelledby="nwTitle">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">相关资讯</p>
+            <h2 id="nwTitle">独立出版与流通动态</h2>
+          </div>
+          <p class="sec-note">按发生日期排列，与档案条目分开记。</p>
+        </div>
+        <div class="news">
+          <article>
+            <h3>广州一处旧货市场摊位调整</h3>
+            <p>11 月 2 日起，海珠区某旧货市场二层东侧摊位合并经营，原先散在三个摊位的磁带集中到一个柜台。据摊主说，合并后日均翻阅人数没变。</p>
+            <span class="meta">11月2日 · 广州</span>
+          </article>
+          <article>
+            <h3>西安高校社团办小志交换日</h3>
+            <p>11 月 1 日，西安三所高校的独立出版兴趣小组在校园内办了交换日，带来 2000 年后的复印小志 43 份，其中 6 份被本站编目人员现场记录。</p>
+            <span class="meta">11月1日 · 西安</span>
+          </article>
+          <article>
+            <h3>沈阳地下演出档案展延期一周</h3>
+            <p>原定 10 月 26 日结束的展览延期至 11 月 2 日，展出票根与海报残片 58 件。馆方称延期原因是周末入场人数超出预期。</p>
+            <span class="meta">10月30日 · 沈阳</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="rank" aria-labelledby="rkTitle">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">可信度分层</p>
+            <h2 id="rkTitle">条目定级与本周高频物件</h2>
+          </div>
+          <p class="sec-note">左列是定级标准，右列是本周被查阅最多的物件。</p>
+        </div>
+        <div class="rank">
+          <div class="card">
+            <h3 style="font-size:16px;margin-bottom:6px">三级定级标准</h3>
+            <p style="font-size:14px">定级只看证据链完整度，不看物件稀有程度。</p>
+            <div class="rank-row">
+              <span class="rank-num">A</span>
+              <div><b>实物可查 + 两位独立证人</b><p>带体或纸本可调阅，证人互不转述，关键数字（时长、克重、切口深度）至少两项有实测。</p></div>
+            </div>
+            <div class="rank-row">
+              <span class="rank-num">B</span>
+              <div><b>实物可查，但证人单一</b><p>物件本身没问题，流转信息靠一位口述人。年份可能有偏差，不作为年代判断的主要依据。</p></div>
+            </div>
+            <div class="rank-row">
+              <span class="rank-num">C</span>
+              <div><b>仅有转述或后期材料</b><p>没有原始物件，或标签明显后换。保留在待定区，供比对用，不单独支撑结论。</p></div>
+            </div>
+          </div>
+          <div class="card">
+            <h3 style="font-size:16px;margin-bottom:6px">10月27日—11月6日查阅量</h3>
+            <div class="rank-row"><span class="rank-num">1</span><div><b>GZ-1999-0412 二次转录带</b><p>查阅 312 次，标签笔迹比对是主要查看内容。</p></div></div>
+            <div class="rank-row"><span class="rank-num">2</span><div><b>XA-2006-047 转录带底噪记录</b><p>查阅 248 次，多来自讨论时长差的评论。</p></div></div>
+            <div class="rank-row"><span class="rank-num">3</span><div><b>《夹层》第 4 期油印本</b><p>查阅 207 次，双色套印错位是关注点。</p></div></div>
+            <div class="rank-row"><span class="rank-num">4</span><div><b>SY-2006-P019 海报残片</b><p>查阅 166 次，两个候选时间线版本被反复对照。</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="reco" aria-labelledby="rcTitle">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">相关推荐</p>
+            <h2 id="rcTitle">顺着这些词继续查</h2>
+          </div>
+        </div>
+        <div class="reco">
+          <a class="tag" href="/#deep">打口唱片切口方位</a>
+          <a class="tag" href="/#featured">转录磁带代次判定</a>
+          <a class="tag" href="/#featured">油印小志纸张克重</a>
+          <a class="tag" href="/#updates">地下室演出票根</a>
+          <a class="tag" href="/#deep">城市流通站点地图</a>
+          <a class="tag" href="/#guide">口述音频摘要索引</a>
+          <a class="tag" href="/#rank">条目可信度分层</a>
+          <a class="tag" href="/#news">独立出版流通事件</a>
+          <a class="tag" href="/#faq">复印纸黄斑保存方法</a>
+          <a class="tag" href="/#faq">未编号小志入编规则</a>
+        </div>
+      </section>
+    </div>
+
+    <aside class="side" aria-label="页内导航与本地搜索">
+      <h2>目录</h2>
+      <ol id="sideNav">
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#featured">精选内容</a></li>
+        <li><a href="/#updates">最新更新</a></li>
+        <li><a href="/#cats">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#rank">可信度分层</a></li>
+        <li><a href="/#reco">相关推荐</a></li>
+      </ol>
+      <div class="side-foot">
+        <h2 style="font-size:14px;margin-bottom:6px">站内查找</h2>
+        <form class="search-box" id="searchForm" role="search">
+          <label class="sr-only" for="q">输入关键词查找本节条目</label>
+          <input id="q" name="q" type="search" placeholder="如：切口、油印、票根" autocomplete="off">
+          <button class="btn btn-sm" type="submit">查找</button>
+        </form>
+        <p class="search-result" id="searchResult" aria-live="polite">输入词后在本页匹配条目。</p>
+        <ul class="search-hit" id="searchHit"></ul>
+        <p style="margin:8px 0 0">示例数据，部分条目仍在核对。</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p class="sample-note">示例数据说明：本页条目、编号、人名与口述摘要均为演示用途的示例内容，不构成对任何实物真伪或价格的判断。</p>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="12" fill="#e2b04a"/>
+            <path d="M14 44 L26 18 L34 34 L40 24 L52 44" stroke="#1c1a17" stroke-width="5" fill="none" stroke-linejoin="round"/>
+          </svg>
+          <span>不良研究社网站</span>
+        </div>
+        <p style="font-size:13.5px;color:#a2977f;max-width:280px">把零散实物按城市、年份和证据链排好，让后来的查证少走一遍弯路。</p>
+      </div>
+      <div>
+        <h3>档案</h3>
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#featured">精选内容</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#cats">分类入口</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>方法</h3>
+        <ul>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#rank">可信度分层</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>互动</h3>
+        <ul>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <p>页面更新时间：2026-11-08，对应正文 11 月 6 日编目条目与 11 月 4 日分类调整。</p>
+      <p>© 2026 不良研究社网站 · 示例内容，版权归原作者所有</p>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="回到页面顶部">↑</button>
+
+<script>
+(function(){
+  var navToggle=document.getElementById('navToggle');
+  var mainNav=document.getElementById('mainNav');
+  if(navToggle&&mainNav){
+    navToggle.addEventListener('click',function(){
+      var open=mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded',open?'true':'false');
+    });
+    mainNav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=760){
+        mainNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+  document.addEventListener('click',function(e){
+    if(window.innerWidth<=760&&mainNav.classList.contains('open')){
+      if(!mainNav.contains(e.target)&&e.target!==navToggle){
+        mainNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded','false');
+      }
+    }
+  });
+
+  var links=[].slice.call(document.querySelectorAll('#sideNav a'));
+  var secs=links.map(function(a){
+    var id=a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  });
+  function highlight(){
+    var pos=window.scrollY+140;
+    var idx=-1;
+    secs.forEach(function(s,i){
+      if(s&&s.offsetTop<=pos) idx=i;
+    });
+    links.forEach(function(a,i){a.classList.toggle('active',i===idx)});
+  }
+  window.addEventListener('scroll',highlight,{passive:true});
+  highlight();
+
+  var toTop=document.getElementById('toTop');
+  function checkTop(){toTop.classList.toggle('show',window.scrollY>560)}
+  window.addEventListener('scroll',checkTop,{passive:true});
+  checkTop();
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  var form=document.getElementById('searchForm');
+  var input=document.getElementById('q');
+  var result=document.getElementById('searchResult');
+  var hit=document.getElementById('searchHit');
+  var index=[];
+  [].slice.call(document.querySelectorAll('main h2, main h3, main summary')).forEach(function(el){
+    var id='';
+    var p=el;
+    while(p&&p!==document.body){
+      if(p.id){id=p.id;break}
+      p=p.parentElement;
+    }
+    index.push({text:(el.textContent||'').trim(),id:id||''});
+  });
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var kw=(input.value||'').trim().toLowerCase();
+      hit.innerHTML='';
+      if(!kw){
+        result.textContent='输入词后在本页匹配条目。';
+        return;
+      }
+      var found=index.filter(function(it){return it.text.toLowerCase().indexOf(kw)>-1});
+      if(!found.length){
+        result.textContent='没有找到与「'+input.value+'」相关的条目，换个词试试，比如切口、油印、票根。';
+        return;
+      }
+      result.textContent='找到 '+found.length+' 条匹配：';
+      found.slice(0,8).forEach(function(it){
+        var li=document.createElement('li');
+        if(it.id){
+          var a=document.createElement('a');
+          a.href='/'+'#'+it.id;
+          a.textContent=it.text;
+          li.appendChild(a);
+        }else{
+          li.textContent=it.text;
+        }
+        hit.appendChild(li);
+      });
+    });
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"不良研究社网站",
+  "description":"聚焦街头次文化、独立出版与地下音乐档案的民间观察站，条目按类型、年代、城市分层并公开核对方法。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"同一盘打口带出现两个版本怎么办？","acceptedAnswer":{"@type":"Answer","text":"先比较时长与底噪起升位置，再看标签笔迹。两份都保留原编号，用后缀区分，不要合并成一条。"}},
+    {"@type":"Question","name":"油印小志没有期号，还能入编吗？","acceptedAnswer":{"@type":"Answer","text":"可以归入未编号小志子类，标注纸张克重、装订孔数、油印颜色数量三项，至少两项与已知批次对上才进入正式索引。"}},
+    {"@type":"Question","name":"口述人记不清年份，只记得是“非典那年”之类怎么办？","acceptedAnswer":{"@type":"Answer","text":"把口述原话完整记下来，旁边标注推算年份与推算依据，原话与推算分开存。"}},
+    {"@type":"Question","name":"切割唱片的切口方位真的能判断来源城市吗？","acceptedAnswer":{"@type":"Answer","text":"单独看方位只有六成左右把握，广州站3点钟方向占55%，汕头站占35%，需结合切口深度与标签格式一起判断。"}},
+    {"@type":"Question","name":"演出票根只剩一张，还能复原时间线吗？","acceptedAnswer":{"@type":"Answer","text":"单张票根只能定一场，需配上海报印刷日期、场地方作息与至少一位在场者描述，才能复原多场顺序。"}},
+    {"@type":"Question","name":"纸质小志怎么保存，复印纸会不会自己发黄？","acceptedAnswer":{"@type":"Answer","text":"70克油印纸在南方潮湿环境约五到八年出现黄斑，80克复印纸慢一些，应干燥避光，单页间夹无酸纸，发黄后不要日晒。"}}
+  ]
+}
+</script>
+</body>
+              </html>
